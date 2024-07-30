@@ -62,6 +62,9 @@ main {
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
+.color{
+    color:red;
+}
 
 .box:hover {
     background-color: #eee;

@@ -33,6 +33,7 @@ boxes.forEach((box) => {
         }
         else{
             box.innerText = "X";
+            box.classList.add("color");
             btnVal = true;
         }
         // console.log(btnVal);
