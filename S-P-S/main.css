@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: #BABD8D;
+    text-transform: capitalize;
+}
+
+.head {
+    max-height: 10%;
+    width: 100%;
+    background-color: #7C6A0A;
+    padding:30px;
+    text-align: center;
+}
+.choices{
+    margin:70px;
+    display: flex;
+    justify-content:center;
+    gap:4rem;
+}
+img{
+    border:none;
+    border-radius:50%;
+    transition: box-shadow .2 ease;
+}
+
+img:hover,img.active{
+    box-shadow: 0px 0px 10px 1px #000;
+}
+.score-board{
+    font-size: 25px;
+    width:30%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin:7% auto;
+    text-align: center;
+}
