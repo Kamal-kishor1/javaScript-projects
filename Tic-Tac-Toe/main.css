@@ -1,0 +1,96 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+main {
+    max-width: 600px;
+    height: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.heading {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.msg{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom:30px;
+}
+.hide{
+    visibility: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-bottom:30px;
+}
+
+.boxbtn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.box {
+    width: 90px;
+    height: 90px;
+    background-color: #dddddd;
+    border: none;
+    border-radius: 10px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.box:hover {
+    background-color: #eee;
+}
+
+.newgame,
+.resetgame {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+    margin: 20px;
+}
+
+.newgame:hover,
+.resetgame:hover {
+    background-color: #3e8e41;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.newgame:active,
+.resetgame:active {
+    background-color: #3e8e41;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
