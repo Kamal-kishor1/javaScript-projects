@@ -40,3 +40,9 @@ img:hover,img.active{
     margin:7% auto;
     text-align: center;
 }
+
+.msg-container{
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+}
