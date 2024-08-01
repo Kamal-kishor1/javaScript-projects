@@ -17,19 +17,23 @@ const genSysChoice = () => {
 const drawGame = () => {
     // console.log("game draw");
     msgContent.innerText = "game draw";
+    msgContent.classList.remove("win");
+    msgContent.classList.remove("lose");
     
 };
 
 const showWinner = (userWin) => {
     if (userWin) {
         msgContent.innerText = "user win";
-        msgContent.style.backgroundColor = "green";
+        msgContent.classList.add("win");
+        msgContent.classList.remove("lose");
         userCount++;
         // console.log(userCount);
         uCount.innerText = userCount;
     } else {
-        msgContent.innerText = "sys win";
-        msgContent.style.backgroundColor = "red";
+        msgContent.innerText = "you lose!";
+        msgContent.classList.add("lose");
+        msgContent.classList.remove("win");
         sysCount++;
         // console.log(sysCount);
         sCount.innerText = sysCount;
