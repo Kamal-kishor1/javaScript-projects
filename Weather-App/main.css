@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: url();
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    border: none;
+    outline: none;
+}
+
+.container {
+    width: 400px;
+    max-height: 500px;
+    background-color: rgb(219, 147, 60, .9);
+    padding: 15px;
+    box-shadow: 0px 0px 10px 3px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 5px;
+    outline: 4px solid lightgray;
+}
+
+.heading {
+    margin-top: 20px;
+    margin-bottom: 28px;
+    color: #fff;
+}
+
+form #data{
+    font-size: larger;
+    width: 100%;
+    padding: 6px;
+    border-radius: 20px;
+    outline: 1px solid lightgray;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    text-transform: none;
+}
+
+form .btn {
+    font-size: x-large;
+    cursor: pointer;
+    border:2px solid;
+}
+
+.msg-box {
+    font-size: larger;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.msg-box p {
+    margin-top: 15px;
+}
