@@ -1,0 +1,139 @@
+*{
+    margin:0px;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(to left ,#654597,#574AE2);
+    font-family: Arial, Helvetica,sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top:5%;
+}
+.head{
+    text-align: center;
+    padding:0px 0px 20px 0px;
+    text-decoration:underline;
+    color: #D6CFCB;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+    background-color: #2C2B2B;
+    width: 800px;
+    height: 500px;
+    border:none;
+    padding:25px 50px 25px 50px;
+    border-radius:6px;
+    outline:1px solid #D6CFCB;
+}
+
+form{
+    border:none;
+    outline:none;
+    display: flex;
+    gap:1rem;
+}
+form .input-text{
+    background: transparent;
+    border:2px solid lightgray;
+    padding:6px 0px 6px 10px;
+    border-radius:4px;
+    width:90%;
+    font-weight: 600;
+    font-size: medium;
+    color:#fff;
+}
+form input:active,input:hover{
+    border:2px solid #1278cb;
+    outline: none;
+}
+
+form .btn{
+    font-size: small;
+    padding: 6px;
+    border-radius:4px;
+    background-color: #5DB7DE;
+    color:#fff;
+    width: 80px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+form .btn:hover{
+    box-shadow: 0 0 10px 2px #000;
+}
+
+.option-box{
+    margin: 25px 0px 30px 0px;
+    display: flex;
+    font-size: small;
+}
+.option-box .option{
+    /* border: 2px solid #fff; */
+    padding:15px 22px 15px 22px;
+    text-decoration: none;
+    color:lightgray;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.option-box a:hover{
+    color:#1278cb;
+    background-color: #393939;
+}
+.option-box a:active{
+    background-color: #2b2b2b;
+}
+
+.todo-list {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    font-size: x-large;
+    border-radius: 4px;
+    padding-left:22px;
+  }
+  
+  .todo-list:last-child {
+    margin-bottom: none;
+  }
+  
+  .task {
+    margin-left: 10px;
+    flex: 1;
+  }
+  
+  .delete {
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .delete:hover {
+    color: red;
+  }
+  
+  .delete i {
+    font-size: 18px;
+  }
+  
+  #checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    /* this is used for changing color when checkbox is checked 
+    accent-color:#2C2B2B; */
+  }
+  
+  #checkbox:checked + .task {
+    text-decoration: line-through;
+    color: #ccc;
+    
+  }
