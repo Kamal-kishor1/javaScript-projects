@@ -9,7 +9,7 @@ let msg3 = document.querySelector(".descrip");
 let searchBox = document.querySelector("form #data");
 
 btn.addEventListener("click",()=>{
-    let inputVal = searchBox.innerText;
+    let inputVal = searchBox.value;
     if(inputVal != ""){
         console.log("here is search value is ",inputVal);
     }

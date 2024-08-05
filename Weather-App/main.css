@@ -5,7 +5,11 @@
 }
 
 body {
-    background: url();
+    background: url('images/backgound_img.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     text-transform: capitalize;
     text-align: center;
     display: flex;
@@ -18,9 +22,9 @@ body {
 .container {
     width: 400px;
     max-height: 500px;
-    background-color: rgb(219, 147, 60, .9);
+    background-color: #ADB2D3;
     padding: 15px;
-    box-shadow: 0px 0px 10px 3px;
+    box-shadow: 0px 0px 10px 5px;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-radius: 5px;
@@ -30,10 +34,10 @@ body {
 .heading {
     margin-top: 20px;
     margin-bottom: 28px;
-    color: #fff;
+    color: #594F3B;
 }
 
-form #data{
+form #data {
     font-size: larger;
     width: 100%;
     padding: 6px;
@@ -47,7 +51,10 @@ form #data{
 form .btn {
     font-size: x-large;
     cursor: pointer;
-    border:2px solid;
+    border: 2px solid;
+    background-color: #9C7CA5;
+    border-radius: 5px;
+    padding: 8px;
 }
 
 .msg-box {
