@@ -30,6 +30,12 @@ body{
     outline:1px solid #D6CFCB;
 }
 
+/* .container.overflow-auto {
+    overflow: auto;
+    padding: 10px;     add some padding to the container 
+    border: 1px solid #383737;    add a border to the container 
+  } */
+
 form{
     border:none;
     outline:none;
@@ -67,6 +73,7 @@ form .btn{
 
 form .btn:hover{
     box-shadow: 0 0 10px 2px #000;
+    cursor: pointer;
 }
 
 .option-box{
@@ -102,11 +109,11 @@ form .btn:hover{
     padding-left:22px;
   }
   
-  .todo-list:last-child {
+  #todo-list:last-child {
     margin-bottom: none;
   }
   
-  .task {
+  #task {
     margin-left: 10px;
     flex: 1;
   }
@@ -128,11 +135,11 @@ form .btn:hover{
     width: 20px;
     height: 20px;
     cursor: pointer;
-    /* this is used for changing color when checkbox is checked 
-    accent-color:#2C2B2B; */
+    /* this is used for changing color when checkbox is checked*/ 
+    accent-color:#1663af; 
   }
   
-  #checkbox:checked + .task {
+  #checkbox:checked + #task {
     text-decoration: line-through;
     color: #ccc;
     
