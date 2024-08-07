@@ -13,17 +13,21 @@
 
 <body>
     <div class="container">
-        <div class="head">
-            <h1>My Todo-s</h1>
+        <div class="topdiv">
+            <div class="head">
+                <h1>My Todo-s</h1>
+            </div>
+            <form>
+                <input type="text" class="input-text" placeholder="New Task....">
+                <a class="btn">Add</a>
+            </form>
+            <div class="option-box">
+                <a href="#all" id="all" class="option">All</a>
+                <a href="#act" id="act" class="option">Active</a>
+                <a href="#completed" id="completed" class="option">Completed</a>
+            </div>
         </div>
-        <form>
-            <input type="text" class="input-text" placeholder="New Task....">
-            <a class="btn">Add</a>
-        </form>
-        <div class="option-box">
-            <a href="#all" id="all" class="option">All</a>
-            <a href="#act" id="act" class="option">Active</a>
-            <a href="#completed" id="completed" class="option">Completed</a>
+        <div class="task-container">
         </div>
     </div>
 

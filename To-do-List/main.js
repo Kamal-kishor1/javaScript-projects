@@ -1,15 +1,33 @@
 const btn = document.querySelector("form .btn");
 let inputBox = document.querySelector("form .input-text");
 const container = document.querySelector(".container");
+let topDiv = document.querySelector(".topdiv");
+let taskContainer = document.querySelector(".task-container");
 
 
-container.addEventListener('DOMSubtreeModified', () => {
-    if (container.scrollHeight > container.offsetHeight) {
-        container.style.overflow = 'auto';
+taskContainer.addEventListener('DOMSubtreeModified', () => {
+    if (taskContainer.scrollHeight > taskContainer.offsetHeight) {
+        taskContainer.style.overflow = 'auto';
     } else {
-        container.style.overflow = 'hidden';
+        taskContainer.style.overflow = 'hidden';
     }
 });
+
+// window.onscroll = ()=>{
+//     todoList.forEach(sec => {
+//         let top = window.scrollY;
+//         let offset = sec.offsetTop - 150;
+//         let height = sec.offsetHeight;
+//         let id = sec.getAttribute('id');
+
+//         if (top >= offset && top < offset + height) {
+//             navLinks.forEach(links => {
+//                 links.classList.remove('active');
+//                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+//             });
+//         };
+//     });
+// }
 
 
 btn.addEventListener("click", () => {
@@ -35,8 +53,8 @@ const elementCreation = (val) => {
     const todoList = document.createElement("div");
     // class name is given to the div
     todoList.className = "todo-list";
-    // now it is added to the container
-    container.append(todoList);
+    // now it is added to the task-container
+    taskContainer.append(todoList);
 
     const checkBox = document.createElement("input");
     checkBox.type = "checkbox";
