@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("./images/quiz.webp");
+
+}
+
+main {
+    /* background-color: rgba(247, 247, 247, 0.2); */
+}
