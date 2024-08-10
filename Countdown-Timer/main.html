@@ -6,52 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counterdown Timer</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css"
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css"
         integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 
 <body>
 
-    <div class="ui center aligned container">
-        <div class="ui center aligned header">
+    <div id="container" class="ui center aligned container">
+        <div id="header" class="ui center aligned header">
             <h1>CountDown Timer</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, placeat?</p>
         </div>
-        <div class="ui four column centered grid">
-            <div class="ui row">
+        <div id="grid" class="ui four column centered grid">
+            <div id="row1" class="ui row">
                 <div class="two wide column">
                     <label>day</label>
                 </div>
                 <div class="two wide column">
-                    <label>hours</label>
+                    <label style="margin-left: -15px;">hours</label>
                 </div>
                 <div class="two wide column">
-                    <label>minutes</label>
+                    <label style="margin-left: -30px;">minutes</label>
                 </div>
                 <div class="two wide column">
-                    <label>second</label>
+                    <label style="margin-left: -50px;">seconds</label>
                 </div>
             </div>
-            <div class="ui row">
+            <div id="row2" class="ui row">
                 <div class="ui clock padded raised segment">
+                    <label class="ui label">0</label>
                     <label class="ui label">0</label>
                 </div>
                 <div class="ui clock padded raised segment">
                     <label class="ui label">0</label>
+                    <label class="ui label">0</label><span>:</span>
                 </div>
                 <div class="ui clock segment">
                     <label class="ui label">0</label>
+                    <label class="ui label">0</label><span>:</span>
                 </div>
                 <div class="ui segment">
+                    <label class="ui label">0</label>
                     <label class="ui label">0</label>
                 </div>
             </div>
         </div>
-        <div class="ui box">
-            <button class="ui inverted primary button">start</button>
-            <button class="ui inverted primary button">stop</button>
-            <button class="ui inverted primary button">clear</button>
+        <div id="box" class="ui box">
+            <button id="btn1" class="ui inverted primary button">Start</button>
+            <button id="btn2" class="ui inverted primary button">Stop</button>
+            <button id="btn3" class="ui inverted primary button">Clear</button>
         </div>
     </div>
 

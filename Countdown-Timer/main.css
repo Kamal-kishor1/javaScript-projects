@@ -1,0 +1,122 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, #C49BBB, #19297C);
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+
+}
+
+#container {
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 800px;
+    max-height: 1000px;
+    background-color: #D1BCE3;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px 3px #19297C;
+    padding: 20px;
+}
+
+#header {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#header h1 {
+    margin-bottom: 20px;
+    text-shadow: 0px 7px 7px black;
+}
+
+#header p {
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+#grid {
+    display: grid;
+    margin-bottom: 15px;
+}
+
+#row1,
+#row2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    text-transform: capitalize;
+}
+
+#row2 {
+    padding: 10px 10px 10px 30px;
+}
+
+.segment {
+    border: none;
+    font-size: 90px;
+    font-weight: 600;
+    display: flex;
+    gap: .4rem;
+
+}
+
+.segment label {
+    display: flex;
+    flex-direction: column;
+    background-color: #19297C;
+    border-radius: 5px;
+    justify-content: center;
+    width: 50px;
+    height: 80px;
+    color: #fff;
+}
+
+.segment span {
+    text-align: center;
+    margin-top: -17px;
+    padding-left: 10px;
+    color: #fff;
+    /* background-color: aqua; */
+}
+
+#box {
+    /* border: 1px solid black;
+    background-color: rgb(211, 142, 52); */
+
+}
+
+#box #btn1,
+#btn2,
+#btn3 {
+    position: relative;
+    top: -2px;
+    font-size: x-large;
+    background-color: #585481;
+    color: #fff;
+    padding: 6px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 80px;
+    box-shadow: 0px 5px 9px #585481;
+    transition: .2s ease;
+    border: 1px solid #fff;
+}
+
+#box #btn1:hover,
+#btn2:hover,
+#btn3:hover {
+    top: 0;
+    background-color: #fff;
+    color: #585481;
+    box-shadow: 0px 5px 9px #fff;
+    border: 1px solid #585481;
+}
