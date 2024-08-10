@@ -6,11 +6,9 @@ let clockMin = document.querySelectorAll("#clock-min");
 
 
 const countDown = () => {
-
     let startTime = new Date("August 12, 2024").getTime();
-    let currTime = new Date().getTime();
-
     setInterval(() => {
+        let currTime = new Date().getTime();
         let remainTime = startTime - currTime;
 
         let day = Math.floor(remainTime / (24 * 60 * 60 * 1000));
@@ -18,10 +16,17 @@ const countDown = () => {
         let min = Math.floor((remainTime % (1000 * 60 * 60)) / (1000 * 60));
         let sec = Math.floor((remainTime % (1000 * 60)) / (1000));
 
+        clockDay.forEach((evt) => {
+            // evt.firstElementChild.innerText = "9";
+            // evt.lastElementChild.innerText = sec;
+            // evt.nextElementSibling.firstElementChild.innerText = min;
+            // evt.nextElementSibling.children[1].innerText = "9"
+        })
 
     }, 1000);
 };
 
+countDown();
 
 
 
