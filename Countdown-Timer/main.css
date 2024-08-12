@@ -88,9 +88,9 @@ body {
     /* background-color: aqua; */
 }
 
-#box #btn1,
-#btn2,
-#btn3 {
+#box #start,
+#stop,
+#reset {
     position: relative;
     top: -2px;
     font-size: x-large;
@@ -105,9 +105,9 @@ body {
     border: 1px solid #fff;
 }
 
-#box #btn1:hover,
-#btn2:hover,
-#btn3:hover {
+#box #start:hover,
+#stop:hover,
+#reset:hover {
     top: 0;
     background-color: #fff;
     color: #585481;
