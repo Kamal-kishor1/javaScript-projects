@@ -16,7 +16,12 @@
     <div id="container" class="ui center aligned container">
         <div id="header" class="ui center aligned header">
             <h1>CountDown Timer</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, placeat?</p>
+            <p>This Countdown timer is only for the upcoming events!!</p>
+        </div>
+        <div class="form">
+            <div class="msg">Select the Date and time :</div>
+            <input class="start-date" type="datetime-local" required>
+            <!-- <input class="start-time" type="time" required> -->
         </div>
         <div id="grid" class="ui four column centered grid">
             <div id="row1" class="ui row">
@@ -52,6 +57,7 @@
                 </div>
             </div>
         </div>
+        <div class="result hide"></div>
         <div id="box" class="ui box">
             <button id="start" class="ui inverted primary button">Start</button>
             <button id="stop" class="ui inverted primary button">Stop</button>
