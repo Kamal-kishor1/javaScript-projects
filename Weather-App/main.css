@@ -37,7 +37,7 @@ body {
     color: #594F3B;
 }
 
-form #data {
+#data {
     font-size: larger;
     width: 100%;
     padding: 6px;
@@ -48,7 +48,7 @@ form #data {
     text-transform: none;
 }
 
-form .btn {
+.btn {
     font-size: x-large;
     cursor: pointer;
     border: 2px solid;
