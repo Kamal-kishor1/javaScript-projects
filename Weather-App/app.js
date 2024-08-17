@@ -17,6 +17,7 @@ btn.addEventListener("click", () => {
     if (inputVal) {
         wetHer(inputVal);
     }
+    searchBox.value = "";
 });
 
 
