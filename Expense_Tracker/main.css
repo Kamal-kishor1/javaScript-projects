@@ -121,7 +121,7 @@ main h1 {
     box-shadow: 0px 3px 8px lightgray;
 }
 
-.verticalbar {
+.verticalebar {
     width: 1%;
     height: 3.2rem;
     background-color: #3B0D11;
@@ -134,7 +134,7 @@ main h1 {
     margin-left: 1.2rem;
 }
 
-.flex-checklist #cost {
+.flex-checklist #pcost {
     margin-left: 50%;
 }
 
