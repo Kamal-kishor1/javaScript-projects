@@ -40,6 +40,7 @@ main h1 {
 
 .container .heading {
     text-transform: capitalize;
+    cursor: default;
     width: 100%;
 }
 
@@ -147,4 +148,14 @@ main h1 {
     position: relative;
     margin-left: 3rem;
     color: #3B0D11;
+}
+
+.flex-checklist .delete-btn:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.flex-checklist .edit-btn:hover {
+    color: rgb(41, 139, 204);
+    cursor: pointer;
 }
