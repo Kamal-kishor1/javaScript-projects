@@ -6,10 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <main>
+        <h1>expense tracker</h1>
+        <div class="grid-con">
+            <div class="container">
+                <div class="heading">
+                    <h2>budget</h2>
+                </div>
+                <div class="content">
+                    <input type="text" id="input-budget" placeholder="Enter Total amount">
+                    <button class="budget btn">Set Budget</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="heading">
+                    <h2>Expenses</h2>
+                </div>
+                <div class="content expense">
+                    <input type="text" id="input-product" placeholder="Product Name">
+                    <input type="text" id="input-amount" placeholder="Enter Total amount">
+                    <button class="expense btn">Check Amount</button>
+                </div>
+            </div>
+        </div>
+        <div class="mid container">
+            <div class="heading">
+                <div class="head1">
+                    <h2>Total Amount</h2>
+                    <div class="head1 he-content">230</div>
+                </div>
+                <div class="head2">
+                    <h2>expenses</h2>
+                    <div class="head2 he-content">230</div>
+                </div>
+                <div class="head3">
+                    <h2>balance</h2>
+                    <div class="head3 he-content">230</div>
+                </div>
+            </div>
+        </div>
 
+        <div class="checkbox container">
+            <div class="heading">
+                <h2>expense list</h2>
+            </div>
+            <div class="content-flex">
+                <div class="flex-checklist">
+                    <div class="verticalbar"></div>
+                    <p id="amount">hello</p>
+                    <p id="cost">8000</p>
+                    <div class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></div>
+                    <div class="delete-btn"> <i class="fa fa-trash" aria-hidden="true"></i></div>
+                </div>
+                <div class="flex-checklist">
+                    <div class="verticalbar"></div>
+                    <p id="amount">hello</p>
+                    <p id="cost">8000</p>
+                    <div class="edit-btn"><i class="fa fa-edit" aria-hidden="true"></i></div>
+                    <div class="delete-btn"> <i class="fa fa-trash" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
 
     <script src="main.js"></script>
 

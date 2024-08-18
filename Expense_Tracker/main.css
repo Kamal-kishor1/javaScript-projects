@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+main h1 {
+    background-color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.grid-con {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 1rem;
+    outline: 1px solid lightgray;
+    box-shadow: 0px 4px 8px lightgray;
+    width: 400px;
+    max-height: fit-content;
+    border-radius: 5px;
+    margin-left: 30px
+}
+
+.container .heading {
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.content input {
+    width: 100%;
+    font-size: small;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 15px;
+    border: 1px solid lightgray;
+}
+
+.content .btn {
+    font-size: small;
+    padding: 8px;
+    background-color: #3B0D11;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.content .btn:hover {
+    background-color: #fff;
+    color: #3B0D11;
+    border: 1px solid #3B0D11;
+}
+
+.mid {
+    display: flex;
+    align-items: center;
+    width: 830px;
+    background-color: #3B0D11;
+    color: #fff;
+    box-shadow: 0px 4px 8px #3B0D11;
+    outline: 1px solid #3B0D11;
+}
+
+.mid .heading {
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    column-gap: 11rem;
+}
+
+.mid .he-content {
+    justify-content: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.checkbox {
+    width: 830px;
+}
+
+.content-flex {
+    display: flex;
+    flex-direction: column;
+    color: #131212;
+}
+
+.flex-checklist {
+    display: flex;
+    outline: 1px solid lightgray;
+    align-items: center;
+    width: 100%;
+    text-transform: capitalize;
+    border-radius: 5px;
+    line-height: 3rem;
+    font-size: larger;
+    font-weight: 600;
+    /* background-color: #db7079; */
+    margin-bottom: 8px;
+    box-shadow: 0px 3px 8px lightgray;
+}
+
+.verticalbar {
+    width: 1%;
+    height: 3.2rem;
+    background-color: #3B0D11;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.flex-checklist p,
+.delete-btn,
+.edit-btn {
+    margin-left: 1.2rem;
+}
+
+.flex-checklist #cost {
+    margin-left: 50%;
+}
+
+.flex-checklist .edit-btn {
+    position: relative;
+    margin-left: 7rem;
+    color: #3B0D11;
+}
+
+.flex-checklist .delete-btn {
+    position: relative;
+    margin-left: 3rem;
+    color: #3B0D11;
+}
