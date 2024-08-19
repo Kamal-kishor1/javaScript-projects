@@ -1,41 +1,42 @@
 const inputProduct = document.getElementById("input-product");
-const inputBudget = document.getElementById("input-budget");
+const userBudget = document.getElementById("input-budget");
 const inputAmount = document.getElementById("input-amount");
 const setBudgetBtn = document.querySelector(".setbudget");
 const checkExpenseBtn = document.querySelector(".checkamount");
-const tAmount = document.querySelector(".head1");
+const totalAmount = document.querySelector(".head1");
+const totalExpense = document.querySelector(".head2");
+const totalBalance = document.querySelector(".head3");
 
+totalExpense.lastElementChild.innerText = 0;
 
 setBudgetBtn.addEventListener("click", () => {
-    let budgetVal = inputBudget.value;
-    if (budgetVal === "") {
+    let totalBudget = userBudget.value;
+    if (totalBudget === "") {
         alert(`This field cannot be empty?`);
-    } else if (budgetVal <= 100) {
+    } else if (totalBudget <= 100) {
         alert("And your budget cannot be less than 99");
     }
     else {
-        tAmount.lastElementChild.innerText = budgetVal;
-        inputBudget.value = "";
+        totalAmount.lastElementChild.innerText = totalBudget;
+        userBudget.value = "";
     }
 });
 
 
 checkExpenseBtn.addEventListener("click", () => {
-    let tCost = tAmount.lastElementChild.innerText;
-    if (tCost != "") {
-        let productName = inputProduct.value;
-        let productVal = inputAmount.value;
-        checkAmount(tCost, productName, productVal);
-        // expensesList(productName, productVal);
-        // inputProduct.value = "";
-        // inputAmount.value = "";
+    let totalCost = totalAmount.lastElementChild.innerText;
+    if (totalCost != "") {
+        let userProduct = inputProduct.value;
+        let userVal = inputAmount.value;
+        checkAmount(totalCost, userVal);
+        expensesList(userProduct, userVal);
     }
     else {
         alert("First set your budget please!");
     }
 });
 
-const expensesList = (productName, productVal) => {
+const expensesList = (userProduct, userVal) => {
     const contentFlex = document.querySelector(".content-flex");
 
     let checkList = document.createElement("div");
@@ -49,12 +50,12 @@ const expensesList = (productName, productVal) => {
     let pName = document.createElement("p");
     pName.id = "pname";
     checkList.append(pName);
-    pName.innerText = productName;
+    pName.innerText = userProduct;
 
     let pCost = document.createElement("p");
     pCost.id = "pcost";
     checkList.append(pCost);
-    pCost.innerText = productVal;
+    pCost.innerText = userVal;
 
     let editBtn = document.createElement("div");
     editBtn.className = "edit-btn";
@@ -77,20 +78,22 @@ const expensesList = (productName, productVal) => {
     // console.log(checkList);
 };
 
-const checkAmount = (tCost, productName, productVal) => {
-    let expenses = 0;
-    expenses += productVal;
-    if (productVal === "") {
+
+
+const checkAmount = (totalCost, userVal) => {
+
+    if (userVal === "") {
         alert("Please also enter the cost!");
     } else {
-        let balance = tCost - expenses;
-        let balHead = document.querySelector(".head3");
-        balHead.lastElementChild.innerText = balance;
-        if (balance >= tCost) {
-            alert("You have reached your limit!");
-            return balance;
-        }
-        expensesList(productName, productVal);
+        let expense = parseInt(userVal);
+        let sum = parseInt(totalExpense.lastElementChild.innerText) + expense;
+        console.log(sum);
+        totalExpense.lastElementChild.innerText = sum;
+        const Balance = totalCost - sum;
+        console.log(Balance);
+        totalBalance.lastElementChild.innerText = Balance;
 
+        inputProduct.value = "";
+        inputAmount.value = "";
     }
 };
