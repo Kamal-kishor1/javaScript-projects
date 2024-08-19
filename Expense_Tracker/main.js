@@ -28,8 +28,7 @@ checkExpenseBtn.addEventListener("click", () => {
     if (totalCost != "") {
         let userProduct = inputProduct.value;
         let userVal = inputAmount.value;
-        checkAmount(totalCost, userVal);
-        expensesList(userProduct, userVal);
+        checkAmount(totalCost, userProduct, userVal);
     }
     else {
         alert("First set your budget please!");
@@ -75,25 +74,61 @@ const expensesList = (userProduct, userVal) => {
     deleteIcon.ariaHidden = "true";
     deleteBtn.append(deleteIcon);
 
+    editFunc(editIcon, pName, pCost);
+    deleteFunc(deleteIcon, pCost, checkList);
+
     // console.log(checkList);
 };
 
 
 
-const checkAmount = (totalCost, userVal) => {
+const checkAmount = (totalCost, userProduct, userVal) => {
 
-    if (userVal === "") {
-        alert("Please also enter the cost!");
+    if (!userVal || !userProduct) {
+        alert("Please fill the entry!");
     } else {
         let expense = parseInt(userVal);
         let sum = parseInt(totalExpense.lastElementChild.innerText) + expense;
-        console.log(sum);
+        // console.log(sum);
         totalExpense.lastElementChild.innerText = sum;
         const Balance = totalCost - sum;
-        console.log(Balance);
+        // console.log(Balance);
         totalBalance.lastElementChild.innerText = Balance;
 
+        expensesList(userProduct, userVal);
         inputProduct.value = "";
         inputAmount.value = "";
     }
+
+};
+
+
+// const editFunc = (editIcon, pName, pCost) => {
+//     editIcon.addEventListener("click", () => {
+//         let oldName = pName.innerText;
+//         let oldAmount = pCost.innerText;
+//         inputProduct.value = oldName;
+//         inputAmount.value = oldAmount;
+//     });
+// };
+
+const deleteFunc = (deleteIcon, pCost, checkList) => {
+    deleteIcon.addEventListener("click", () => {
+        const userDeletedAmount = pCost.innerText;
+        let tExpense = totalExpense.lastElementChild.innerText;
+        let newExpense = tExpense - userDeletedAmount;
+        totalExpense.lastElementChild.innerText = newExpense;
+
+        let tBalance = parseInt(totalBalance.lastElementChild.innerText);
+        let newBalance = tBalance + parseInt(userDeletedAmount);
+        totalBalance.lastElementChild.innerText = newBalance;
+
+        checkList.remove();
+
+        // console.log(userDeletedAmount);
+        // console.log(tExpense);
+        // console.log(newExpense);
+        // console.log(tBalance);
+        // console.log(newBalance);
+    });
 };
