@@ -26,9 +26,7 @@ setBudgetBtn.addEventListener("click", () => {
 checkExpenseBtn.addEventListener("click", () => {
     let totalCost = totalAmount.lastElementChild.innerText;
     if (totalCost != "") {
-        let userProduct = inputProduct.value;
-        let userVal = inputAmount.value;
-        checkAmount(totalCost, userProduct, userVal);
+        checkAmount();
     }
     else {
         alert("First set your budget please!");
@@ -82,8 +80,10 @@ const expensesList = (userProduct, userVal) => {
 
 
 
-const checkAmount = (totalCost, userProduct, userVal) => {
-
+const checkAmount = () => {
+    let userProduct = inputProduct.value;
+    let userVal = inputAmount.value;
+    let totalCost = totalAmount.lastElementChild.innerText;
     if (!userVal || !userProduct) {
         alert("Please fill the entry!");
     } else {
@@ -103,14 +103,20 @@ const checkAmount = (totalCost, userProduct, userVal) => {
 };
 
 
-// const editFunc = (editIcon, pName, pCost) => {
-//     editIcon.addEventListener("click", () => {
-//         let oldName = pName.innerText;
-//         let oldAmount = pCost.innerText;
-//         inputProduct.value = oldName;
-//         inputAmount.value = oldAmount;
-//     });
-// };
+const editFunc = (editIcon, pName, pCost) => {
+    editIcon.addEventListener("click", () => {
+        let parentDiv = pName.parentElement;
+        let oldName = pName.innerText;
+        let oldUserCost = pCost.innerText;
+        let oldBalance = parseInt(totalBalance.lastElementChild.innerText);
+        let oldExpense = totalExpense.lastElementChild.innerText;
+        totalExpense.lastElementChild.innerText = oldExpense - oldUserCost;
+        totalBalance.lastElementChild.innerText = oldBalance + parseInt(oldUserCost);
+        inputProduct.value = oldName;
+        inputAmount.value = oldUserCost;
+        parentDiv.remove();
+    });
+};
 
 const deleteFunc = (deleteIcon, pCost, checkList) => {
     deleteIcon.addEventListener("click", () => {

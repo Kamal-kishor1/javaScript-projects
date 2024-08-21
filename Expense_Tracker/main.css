@@ -132,21 +132,26 @@ main h1 {
 .delete-btn,
 .edit-btn {
     margin-left: 1.2rem;
+    /* background-color: aqua; */
+    width: 200px;
 }
 
 .flex-checklist #pcost {
-    margin-left: 50%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: center;
 }
 
 .flex-checklist .edit-btn {
     position: relative;
-    margin-left: 7rem;
+    width: 20px;
     color: #3B0D11;
 }
 
 .flex-checklist .delete-btn {
     position: relative;
-    margin-left: 3rem;
+    width: 20px;
+    margin-left: 5rem;
     color: #3B0D11;
 }
 
